@@ -30,7 +30,7 @@ public class StoreController {
         return storeService.buyItems(humanId,itemId,amount);
     }
 
-    @GetMapping("/restock")
+    @PutMapping("/restock")
     public ResponseEntity<?> restock(){
         return storeService.restock();
     }
