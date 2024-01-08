@@ -22,7 +22,7 @@ public class StoreController {
     public ResponseEntity<?> list(@RequestParam(value = "name",required = false) String name){
         return ResponseEntity.ok(storeService.getList(name));
     }
-    @GetMapping("/buy")//todo put
+    @PutMapping("/buy")
     public ResponseEntity<?> buyItems(
             @RequestParam(value = "human_id") Long humanId,
             @RequestParam(value = "item_id") Long itemId,

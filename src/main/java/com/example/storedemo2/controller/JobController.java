@@ -23,7 +23,7 @@ public class JobController {
     public ResponseEntity<?> list(@RequestParam(value = "name",required = false) String name){
         return ResponseEntity.ok(jobService.getList(name));
     }
-    @GetMapping("/work")//todo put
+    @PutMapping("/work")
     public ResponseEntity<?> work(
             @RequestParam(value = "human_id",required = true) Long humanId,
             @RequestParam(value = "job_id",required = true) Long jobId){

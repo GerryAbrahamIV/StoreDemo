@@ -27,7 +27,7 @@ public class HumanController {
     public ResponseEntity<?> detail(@PathVariable Long id) throws NoSuchObjectException {
         return humanService.getDetail(id);
     }
-    @GetMapping("/use")//todo put
+    @PutMapping("/use")
     public ResponseEntity<?> useItem(
             @RequestParam(value = "human_id") Long humanId,
             @RequestParam(value = "item_id") Long itemId,
